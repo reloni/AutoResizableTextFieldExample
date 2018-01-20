@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoResizableTextFieldExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlG-YZ-DjS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDq-rE-bpf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="497"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9yM-1Y-YYz">
+                                                <rect key="frame" x="0.0" y="40" width="375" height="183.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pSX-a7-Xgk">
+                                                <rect key="frame" x="0.0" y="273.5" width="375" height="183.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="pSX-a7-Xgk" secondAttribute="bottom" id="4UD-dw-GGl"/>
+                                            <constraint firstItem="9yM-1Y-YYz" firstAttribute="leading" secondItem="nDq-rE-bpf" secondAttribute="leadingMargin" id="5Nz-zK-mRM"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="pSX-a7-Xgk" secondAttribute="trailing" id="9Qx-Ql-FR6"/>
+                                            <constraint firstItem="pSX-a7-Xgk" firstAttribute="top" secondItem="9yM-1Y-YYz" secondAttribute="bottom" constant="50" id="9hH-wM-mWB"/>
+                                            <constraint firstItem="9yM-1Y-YYz" firstAttribute="top" secondItem="nDq-rE-bpf" secondAttribute="topMargin" id="Udw-A9-D24"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="9yM-1Y-YYz" secondAttribute="trailing" id="Vd8-ce-32k"/>
+                                            <constraint firstItem="pSX-a7-Xgk" firstAttribute="leading" secondItem="nDq-rE-bpf" secondAttribute="leadingMargin" id="pPj-qM-xLk"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="40" left="0.0" bottom="40" right="0.0"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nDq-rE-bpf" firstAttribute="top" secondItem="tlG-YZ-DjS" secondAttribute="top" id="5pG-GW-GCc"/>
+                                    <constraint firstItem="nDq-rE-bpf" firstAttribute="height" secondItem="tlG-YZ-DjS" secondAttribute="height" priority="250" id="B0c-rj-TcY"/>
+                                    <constraint firstAttribute="bottom" secondItem="nDq-rE-bpf" secondAttribute="bottom" id="Dvd-X2-r1K"/>
+                                    <constraint firstItem="nDq-rE-bpf" firstAttribute="leading" secondItem="tlG-YZ-DjS" secondAttribute="leading" id="gT3-BT-wlR"/>
+                                    <constraint firstItem="nDq-rE-bpf" firstAttribute="width" secondItem="tlG-YZ-DjS" secondAttribute="width" id="uqN-gR-tMs"/>
+                                    <constraint firstAttribute="trailing" secondItem="nDq-rE-bpf" secondAttribute="trailing" id="yAd-2M-Awj"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tlG-YZ-DjS" secondAttribute="bottom" id="3af-Hp-UWG"/>
+                            <constraint firstItem="tlG-YZ-DjS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="80c-bL-ymd"/>
+                            <constraint firstItem="tlG-YZ-DjS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c7Q-Yn-6Y3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tlG-YZ-DjS" secondAttribute="trailing" id="fql-mF-JJJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.5" y="132.5"/>
+        </scene>
+    </scenes>
+</document>
